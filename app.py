@@ -81,5 +81,4 @@ def predict():
     #m = resp.text
 
     return render_template('index.html',prediction_text=' {}'.format(data[13:]))
-if __name__ == "__main__":
-    app.run()
+
