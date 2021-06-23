@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bank Marketing dataset</title>
+</head>
+<body>
+<center><h1>BANK MARKETING DATASET CLASSIFICATION</h1></center>
+<form action="{{url_for('predict')}}" method="POST">
+
+<datalist id="job">
+            <option value="admin">
+            <option value="blue-collar">
+            <option value="entrepreneur">
+			<option value="housemaid">
+			<option value="management">
+			<option value="retired">
+			<option value="services">
+			<option value="student">
+			<option value="technician">
+			<option value="self-employed">
+			<option value="unemployed">
+			<option value="unknown"></datalist>
+<datalist id="marital">
+       <option value="divorced">
+        <option value="married">
+    <option value="single">
+</datalist>
+<datalist id="edu">
+     <option value="basic.4y">
+    <option value="basic.6y">
+    <option value="basic.9y">
+     <option value="high.school">
+     <option value="illiterate">
+     <option value="professional.course">
+    <option value="university.degree">
+    <option value="unknown">
+</datalist>
+<datalist id="default">
+    <option value="yes">
+    <option value="no">
+    <option value="unknown">
+</datalist>
+<datalist id="housing">
+    <option value="yes">
+    <option value="no">
+    <option value="unknown">
+</datalist>
+<datalist id="loan">
+    <option value="yes">
+    <option value="no">
+    <option value="unknown">
+</datalist>
+<datalist id="contact">
+    <option value="cellular">
+    <option value="telephone">
+
+</datalist>
+<datalist id="month">
+            <option value="jan">
+            <option value="feb">
+            <option value="mar">
+			<option value="apr">
+			<option value="may">
+			<option value="jun">
+			<option value="jul">
+			<option value="aug">
+			<option value="sep">
+			<option value="oct">
+			<option value="nov">
+			<option value="dec"></datalist>
+
+</datalist>
+<datalist id="post">
+    <option value="failure">
+    <option value="success">
+    <option value="nonexistent">
+
+</datalist>
+<h2>AGE</h2>
+<input type="number"step="0.001" name="age"placeholder="Enter age">
+<h2>JOB</h2>
+<input list="job" name="job"placeholder="Enter type of job">
+<h2>MARITAL STATUS</h2>
+<input list="marital" name="mar"placeholder="Enter your marital status">
+<h2>Education</h2>
+<input list="edu" name="edu"placeholder="Enter your education">
+<h2>Default (has cerdit in default)</h2>
+<input list="default" name="deff"placeholder="Enter your education">
+<h2>House Loan</h2>
+<input list="housing" name="house"placeholder="Enter if you have house loan">
+<h2>Loan</h2>
+<input list="loan" name="loan"placeholder="Enter if u have loan">
+<h2>Contact</h2>
+<input list="contact" name="contact"placeholder="Enter type of contact">
+<h2>Month of last contract</h2>
+<input list="month" name="month"placeholder="Enter month of last contact">
+<h2>Duration in days</h2>
+<input type="number"step="0.001" name="duration" placeholder="Enter duration">
+<h2>Campaign</h2>
+<input type="number"step="0.001" name="camp" placeholder="Campaign">
+<h2>pdays: number of days that passed by after the client was last contacted from a previous campaign (numeric; 999 means client was not previously contacted)</h2>
+<input type="number"step="0.001"  name="pdays"placeholder="number of days passed">
+<h2>Previous: number of contacts performed before this campaign and for this client</h2>
+<input type="number"step="0.001" name="prev" placeholder="Previous days of campaign">
+<h2>Post:outcome of previous marketing campaign</h2>
+<input list="post" name="post" placeholder="Post days of campaign">
+<h2>Employment variation rate</h2>
+<input type="number" step="0.001" name="empp" placeholder="Employment variation rate">
+<h2>Consumer price Index</h2>
+<input type="number" step="0.001" name="index" placeholder="Enter cost price index">
+<h2>Consumer Confidence Index</h2>
+<input type="number" step="0.001" name="consu" placeholder="Enter consumer confidence index">
+<h2>Euribor 3 month rate - daily indicator</h2>
+<input type="number"step="0.001" name="eu" placeholder="Enter euribor">
+<h2>Number of employees - quarterly indicator (numeric)</h2>
+<input type="number" step="0.001" name="num" placeholder="Enter number of employees"><br>
+<br>
+<button class="res_bt" type="submit">RESULT</button>
+    <h1>RESULT</h1>
+<div class="resultbox">
+     <h1>The result is {{ prediction_text }}</h1>
+    	</div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
