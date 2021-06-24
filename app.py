@@ -52,7 +52,7 @@ def predict():
                 },
             ],
     }
-    print(data)
+    #print(data)
     #list1=[age,job,mar,edu,deff,house,loan,contact,month,duration,camp,pdays,prev,post,empp,index,consu,eu,num]
     #print(list)
     #input_data = "{\"data\": [" + str(list(list1)) + "]}"
@@ -64,19 +64,14 @@ def predict():
     service = 'http://464c378e-089b-4db7-9bc1-4fa1d8035d39.centralus.azurecontainer.io/score'
     #resp = requests.post(service, body, headers=headers)
     req = urllib.request.Request(service, body, headers)
-    try:
-        response = urllib.request.urlopen(req)
 
-        result = response.read()
+    response = urllib.request.urlopen(req)
+
+    result = response.read()
         #print(result)
-        data=json.loads(result)
-        print(data)
-    except urllib.error.HTTPError as error:
-        print("The request failed with status code: " + str(error.code))
+    data=json.loads(result)
+        #print(data)
 
-        # Print the headers - they include the requert ID and the timestamp, which are useful for debugging the failure
-        print(error.info())
-        print(json.loads(error.read().decode("utf8", 'ignore')))
 
     #m = resp.text
 
