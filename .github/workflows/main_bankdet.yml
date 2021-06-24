@@ -59,4 +59,4 @@ jobs:
         with:
           app-name: 'bankdet'
           slot-name: 'production'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_390cb104eb4042ac846e543bc9bce2e2 }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_ca87c13fc43a4286b53a70ac465d9e3a }}
